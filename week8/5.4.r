@@ -6,6 +6,16 @@ y <- c(42.1, 36.0, 31.8, 28.7)
 fit <- lm(y ~ x)
 summary(fit)
 
+
+
+# Confidence interval
+conf_interval <- predict(fit, newdata = data.frame(x), interval = "confidence", level = 0.95)
+
+# Prediction interval
+pred_interval <- predict(fit, newdata = data.frame(x), interval = "prediction", level = 0.95)
+
+confint(fit)
+
 #95% conf interval for slope
 
 est_B1 <- -0.52136

@@ -86,3 +86,13 @@ n <- 712
 ninetyfivepercentobservations <- mean + c(-1, 1) * qt(0.975, n - 1) * sd
 
 qt(0.975, n - 1)
+
+n <- 20
+
+x <- 7
+
+p0 <- 10/124
+
+zobs <- x - (n*p0)/sqrt(n*p0*(1 - p0))
+
+p_value <- 2*(qnorm(0.975))
